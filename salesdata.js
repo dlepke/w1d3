@@ -10,9 +10,9 @@ function calculateSales(salesDataArray) {
 function calculateSalesTax(salesData, taxRates) {
   var salesTaxObject = {};
   for (var i = 0; i < salesData.length; i++) {
-      var company = salesData[i].name;
+    var company = salesData[i].name;
     if (!salesTaxObject[company]) {
-      salesTaxObject[company] = {totalSales: 0, totalTax: 0}
+      salesTaxObject[company] = {totalSales: 0, totalTax: 0};
     }
     var sales = calculateSales(salesData[i].sales);
     var tax = sales * taxRates[salesData[i].province];
